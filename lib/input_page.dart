@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // icons
 
 const bottomContainerHeight = 65.0;
 const reusableCardColor = Color(0xFF1D1E33);
@@ -22,10 +23,22 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(colour: reusableCardColor),
+                  child: ReusableCard(
+                    colour: reusableCardColor,
+                    cardChild: GenderCardContent(
+                      icon: FontAwesomeIcons.mars,
+                      label: 'MALE'
+                    ),
+                  ),
                 ),
                 Expanded(
-                  child: ReusableCard(colour: reusableCardColor),
+                  child: ReusableCard(
+                    colour: reusableCardColor,
+                    cardChild: GenderCardContent(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE'
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -53,6 +66,37 @@ class _InputPageState extends State<InputPage> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class GenderCardContent extends StatelessWidget {
+  
+  GenderCardContent({this.icon, this.label});
+
+  final IconData icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          icon,
+          size: 80.0,
+        ),
+        SizedBox(
+          height: 15.0,
+        ),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 18.0,
+            color: Color(0xFF8D8E98),
+          ),
+        ),
+      ],
     );
   }
 }
