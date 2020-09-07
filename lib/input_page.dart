@@ -112,7 +112,7 @@ class _InputPageState extends State<InputPage> {
           Expanded( // weight + age cards
             child: Row(
               children: [
-                Expanded(
+                Expanded( // weight card
                   child: ReusableCard(
                     colour: kReusableCardColor,
                     cardChild: Column(
@@ -156,7 +156,7 @@ class _InputPageState extends State<InputPage> {
                     ),
                   ),
                 ),
-                Expanded(
+                Expanded( // age card
                   child: ReusableCard(
                     colour: kReusableCardColor,
                     cardChild: Column(
@@ -203,7 +203,7 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
+          Container( // colored footer container
             color: kBottomContainerColor,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity, // makes widget expand across the screen
