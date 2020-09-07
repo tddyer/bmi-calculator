@@ -36,7 +36,7 @@ class _InputPageState extends State<InputPage> {
                         selectedGender = Gender.male;
                       });
                     },
-                    colour: selectedGender == Gender.male ? chosenGenderColor : reusableCardColor,
+                    colour: selectedGender == Gender.male ? kChosenGenderColor : kReusableCardColor,
                     cardChild: GenderCardContent(
                       icon: FontAwesomeIcons.mars,
                       label: 'MALE'
@@ -50,7 +50,7 @@ class _InputPageState extends State<InputPage> {
                         selectedGender = Gender.female;
                       });
                     },
-                    colour: selectedGender == Gender.female ? chosenGenderColor : reusableCardColor,
+                    colour: selectedGender == Gender.female ? kChosenGenderColor : kReusableCardColor,
                     cardChild: GenderCardContent(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE'
@@ -62,26 +62,31 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded( // weight slider card
             child: ReusableCard(
-              colour: reusableCardColor,
+              colour: kReusableCardColor,
+              cardChild: Column(
+                children: [
+                  
+                ],
+              ),
             ),
           ),
           Expanded(
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(colour: reusableCardColor),
+                  child: ReusableCard(colour: kReusableCardColor),
                 ),
                 Expanded(
-                  child: ReusableCard(colour: reusableCardColor),
+                  child: ReusableCard(colour: kReusableCardColor),
                 ),
               ],
             ),
           ),
           Container(
-            color: bottomContainerColor,
+            color: kBottomContainerColor,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity, // makes widget expand across the screen
-            height: bottomContainerHeight,
+            height: kBottomContainerHeight,
           ),
         ],
       ),
