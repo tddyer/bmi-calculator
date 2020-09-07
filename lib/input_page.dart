@@ -18,7 +18,7 @@ class _InputPageState extends State<InputPage> {
 
   Gender selectedGender;
   int height = 67;
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,13 +78,9 @@ class _InputPageState extends State<InputPage> {
                     textBaseline: TextBaseline.alphabetic,
                     children: [
                       Text(
-                        height.toString(),
+                        (height ~/ 12).toString() + "'" + (height % 12).toString() + '"',
                         style: kLabelNumberStyle,
                       ),
-                      Text(
-                        'in',
-                        style: kLabelTextStyle,
-                      )
                     ],
                   ),
                   SliderTheme(
@@ -98,7 +94,7 @@ class _InputPageState extends State<InputPage> {
                     ),
                     child: Slider(
                       value: height.toDouble(),
-                      min: 36,
+                      min: 48,
                       max: 84,
                       onChanged: (double newValue) {
                         setState(() {
