@@ -18,7 +18,8 @@ class _InputPageState extends State<InputPage> {
 
   Gender selectedGender;
   int height = 67;
-  
+  int weight = 150;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,10 +29,10 @@ class _InputPageState extends State<InputPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(
+          Expanded( // male + female cards
             child: Row(
               children: [
-                Expanded( // male card
+                Expanded( 
                   child: ReusableCard(
                     onPress: () {
                       setState(() {
@@ -45,7 +46,7 @@ class _InputPageState extends State<InputPage> {
                     ),
                   ),
                 ),
-                Expanded( // female card
+                Expanded( 
                   child: ReusableCard(
                     onPress: () {
                       setState(() {
@@ -107,14 +108,53 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
           ),
-          Expanded(
+          Expanded( // weight + age cards
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(colour: kReusableCardColor),
+                  child: ReusableCard(
+                    colour: kReusableCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'WEIGHT',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kLabelNumberStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                              backgroundColor: Color(0xFF4C4F5E),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            FloatingActionButton(
+                              backgroundColor: Color(0xFF4C4F5E),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 Expanded(
-                  child: ReusableCard(colour: kReusableCardColor),
+                  child: ReusableCard(
+                    colour: kReusableCardColor,
+                  ),
                 ),
               ],
             ),
