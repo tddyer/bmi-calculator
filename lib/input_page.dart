@@ -34,34 +34,30 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    onPress: () {
                       setState(() {
                         selectedGender = Gender.male;
                       });
                     },
-                    child: ReusableCard(
-                      colour: selectedGender == Gender.male ? chosenGenderColor : reusableCardColor,
-                      cardChild: GenderCardContent(
-                        icon: FontAwesomeIcons.mars,
-                        label: 'MALE'
-                      ),
+                    colour: selectedGender == Gender.male ? chosenGenderColor : reusableCardColor,
+                    cardChild: GenderCardContent(
+                      icon: FontAwesomeIcons.mars,
+                      label: 'MALE'
                     ),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    onPress: () {
                       setState(() {
                         selectedGender = Gender.female;
                       });
                     },
-                    child: ReusableCard(
-                      colour: selectedGender == Gender.female ? chosenGenderColor : reusableCardColor,
-                      cardChild: GenderCardContent(
-                        icon: FontAwesomeIcons.venus,
-                        label: 'FEMALE'
-                      ),
+                    colour: selectedGender == Gender.female ? chosenGenderColor : reusableCardColor,
+                    cardChild: GenderCardContent(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE'
                     ),
                   ),
                 ),
