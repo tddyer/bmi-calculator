@@ -25,6 +25,7 @@ class _InputPageState extends State<InputPage> {
         title: Text('BMI CALCULATOR'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: Row(
@@ -60,12 +61,31 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Expanded( // weight slider card
+          Expanded( // height slider card
             child: ReusableCard(
               colour: kReusableCardColor,
               cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  
+                  Text(
+                    'HEIGHT',                   
+                    style: kLabelTextStyle,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
+                    children: [
+                      Text(
+                        '180',
+                        style: kLabelNumberStyle,
+                      ),
+                      Text(
+                        'in',
+                        style: kLabelTextStyle,
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
