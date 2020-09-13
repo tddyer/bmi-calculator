@@ -203,25 +203,41 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
+          CalculateButton(
+            buttonTitle: 'CALCULATE',
             onTap: () {
               Navigator.pushNamed(context, '/results');
             },
-            child: Container( // colored footer container
-              child: Center(
-                child: Text(
-                  'CALCULATE',
-                  style: kLargeButtonTextStyle
-                ),
-              ),
-              color: kBottomContainerColor,
-              margin: EdgeInsets.only(top: 10.0),
-              padding: EdgeInsets.only(bottom: 10.0),
-              width: double.infinity, // makes widget expand across the screen
-              height: kBottomContainerHeight,
-            ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class CalculateButton extends StatelessWidget {
+
+  CalculateButton({@required this.onTap, @required this.buttonTitle});
+  
+  final Function onTap;
+  final String buttonTitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container( // colored footer container
+        child: Center(
+          child: Text(
+            buttonTitle,
+            style: kLargeButtonTextStyle
+          ),
+        ),
+        color: kBottomContainerColor,
+        margin: EdgeInsets.only(top: 10.0),
+        padding: EdgeInsets.only(bottom: 10.0),
+        width: double.infinity, // makes widget expand across the screen
+        height: kBottomContainerHeight,
       ),
     );
   }
