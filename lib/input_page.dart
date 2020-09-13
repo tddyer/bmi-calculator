@@ -203,11 +203,17 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container( // colored footer container
-            color: kBottomContainerColor,
-            margin: EdgeInsets.only(top: 10.0),
-            width: double.infinity, // makes widget expand across the screen
-            height: kBottomContainerHeight,
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/results');
+            },
+            child: Container( // colored footer container
+              child: Text('CALCULATE'),
+              color: kBottomContainerColor,
+              margin: EdgeInsets.only(top: 10.0),
+              width: double.infinity, // makes widget expand across the screen
+              height: kBottomContainerHeight,
+            ),
           ),
         ],
       ),
