@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/constants.dart';
+import 'package:bmi_calculator/components/calculate_button.dart';
 
 class ResultsPage extends StatelessWidget {
   @override
@@ -41,11 +42,17 @@ class ResultsPage extends StatelessWidget {
                     'Your BMI result is perfectly healthy, keep up your regular habits!',
                     textAlign: TextAlign.center,
                     style: kResultsBodyTextStyle,
-                  )
+                  ),
                 ],
               ),
             ),
           ),
+          CalculateButton(
+            buttonTitle: 'RE-CALCULATE',
+            onTap: () {
+              Navigator.pop(context);
+            },
+          )
         ],
       ),
     );
