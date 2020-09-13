@@ -208,9 +208,15 @@ class _InputPageState extends State<InputPage> {
               Navigator.pushNamed(context, '/results');
             },
             child: Container( // colored footer container
-              child: Text('CALCULATE'),
+              child: Center(
+                child: Text(
+                  'CALCULATE',
+                  style: kLargeButtonTextStyle
+                ),
+              ),
               color: kBottomContainerColor,
               margin: EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.only(bottom: 10.0),
               width: double.infinity, // makes widget expand across the screen
               height: kBottomContainerHeight,
             ),
