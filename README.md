@@ -4,6 +4,10 @@
 
 This project is my implementation of the BMI calculator app built while following "The Complete Flutter Development Bootcamp using Dart" by the London App Brewery and Angela Yu on LinkedIn Learning (https://www.linkedin.com/learning/flutter-part-07-building-the-ui-or-flutter-part-07-building-uis).
 
+## Screenshots
+![bmi-calc-1](https://user-images.githubusercontent.com/39466067/93390563-8238c300-f833-11ea-91ec-1ad23fedb8d1.png)
+![bmi-calc-2](https://user-images.githubusercontent.com/39466067/93390618-9aa8dd80-f833-11ea-9f47-b4315ada22c6.png)
+
 
 ## What you will create
 
