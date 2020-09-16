@@ -212,7 +212,15 @@ class _InputPageState extends State<InputPage> {
             onTap: () {
               BMICalculator calc = BMICalculator(height: height, weight: weight);
               
-              Navigator.pushNamed(context, '/results');
+              Navigator.pushNamed(
+                context,
+                '/results', 
+                arguments: {
+                  'bmiResult': calc.calculateBMI(),
+                  'resultText': calc.getResult(),
+                  'interpretation': calc.getInterpretation()
+                }
+              );
             },
           ),
         ],

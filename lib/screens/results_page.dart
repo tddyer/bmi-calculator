@@ -4,8 +4,12 @@ import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/components/calculate_button.dart';
 
 class ResultsPage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+
+    Map args = ModalRoute.of(context).settings.arguments;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('BMI CALCULATOR'),
@@ -33,15 +37,15 @@ class ResultsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Normal',
+                    args['resultText'].toUpperCase(),
                     style: kResultsTextStyle,
                   ),
                   Text(
-                    '17.7',
+                    args['bmiResult'],
                     style: kBMITextStyle,
                   ),
                   Text(
-                    'Your BMI result is perfectly healthy, keep up your regular habits!',
+                    args['interpretation'],
                     textAlign: TextAlign.center,
                     style: kResultsBodyTextStyle,
                   ),
