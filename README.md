@@ -8,9 +8,7 @@ This project is my implementation of the BMI calculator app built while followin
 <img src="https://user-images.githubusercontent.com/39466067/93390563-8238c300-f833-11ea-91ec-1ad23fedb8d1.png" width="360" height="720">   <img src="https://user-images.githubusercontent.com/39466067/93390618-9aa8dd80-f833-11ea-9f47-b4315ada22c6.png" width="360" height="720">
 
 
-## What you will create
-
-We’re going to make a Body Mass Index Calculator inspired by the beautiful designs made by [Ruben Vaalt](https://dribbble.com/shots/4585382-Simple-BMI-Calculator). It will be a multi screen app with simple functionality but full-on custom styling. 
+The designs of this app were inspired by [Ruben Vaalt](https://dribbble.com/shots/4585382-Simple-BMI-Calculator). It is a multi screen app with simple functionality but full-on custom styling. 
 
 
 ## Topics Covered
